@@ -1,5 +1,5 @@
 <?php
-namespace LazyRecord\CodeGen;
+namespace CodeGen;
 use Exception;
 use SerializerKit\PhpSerializer;
 use Twig_Loader_Filesystem;
@@ -31,7 +31,7 @@ class TemplateView
             'debug' => true,
         ) + $options );
 
-        $this->twig->addFilter('export', new \Twig_Filter_Function('\LazyRecord\CodeGen\twig_var_export'));
+        $this->twig->addFilter('export', new \Twig_Filter_Function('\CodeGen\twig_var_export'));
     }
 
     public function __set($n,$v)

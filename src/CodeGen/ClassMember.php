@@ -1,5 +1,5 @@
 <?php
-namespace LazyRecord\CodeGen;
+namespace CodeGen;
 
 class ClassMember
 {
