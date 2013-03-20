@@ -23,15 +23,15 @@ class TemplateView
 
     public function __construct( $dirs , $options = array() )
     {
-        $this->loader = new \Twig_Loader_Filesystem( $dirs );
-        $this->twig = new \Twig_Environment($this->loader, array(
+        $this->loader = new Twig_Loader_Filesystem( $dirs );
+        $this->twig = new Twig_Environment($this->loader, array(
             'cache' => false,
             'auto_reload' => true,
             'autoescape' => false,
             'debug' => true,
         ) + $options );
 
-        $this->twig->addFilter('export', new \Twig_Filter_Function('\CodeGen\twig_var_export'));
+        $this->twig->addFilter('export', new Twig_Filter_Function('\CodeGen\twig_var_export'));
     }
 
     public function __set($n,$v)
